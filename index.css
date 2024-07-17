@@ -1,0 +1,120 @@
+:root{
+    --icon-primare:black;
+    --icon-second:rgba(0, 0, 0, 0.475);
+    --borde:rgba(0, 0, 0, 0.162);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* cabeçalho */
+#header{
+    border-radius: 1px solid var(--borde);/* teste **/
+    padding: 20px;
+    position: fixed;
+    height: 10px;
+    width: 100vw;
+    display: flex;
+}
+
+#header .start{
+    display: flex;
+    align-items: center;
+    flex: 2;
+}
+
+#header .center{
+    display: flex;
+    align-items: center;
+    flex: 7;
+}
+
+#header .end{
+    flex: 3;
+}
+
+.search-text{
+    border: 0.4px solid var(--borde);
+    border-radius: 15px 0 0 15px;
+    padding: 5px;
+    display: flex;
+    width: 46%;
+    justify-content: space-between;
+}
+
+#header .search-text input[type=text]{
+    outline: 0;
+    border: 0;
+    background-color: none;
+}
+
+#header .search-text .x{
+    border: 1px solid var(--icon-second);
+    width: 20px; 
+    position: absolute;
+}
+
+#header .search-text #a.x{
+    rotate: 45deg;
+
+}
+#header .search-text #b.x{
+    rotate: 135deg;
+}
+
+#header .logo{
+    width: 90px;
+    height: 20px;
+    padding: 20px;
+}
+
+#icon-keyboard{
+    width: 19px;
+    height: 11px;
+    display: inline-block;
+    background-image: url(data:image/gif;base64,R0lGODlhEwALAKECAAAAABISEv///////yH5BAEKAAIALAAAAAATAAsAAAIdDI6pZ+suQJyy0ocV3bbm33EcCArmiUYk1qxAUAAAOw==);
+}
+
+/* side bar */
+#side-bar{
+    border-radius: 1px solid var(--borde);
+    width: 70px;
+    display: flexbox;
+    position: relative;
+    height: 100vh;
+}
+.side-icon{
+    width: 30px;
+    height: 12px;
+    position: relative;
+
+}
+
+.side-icon-item{
+    background-color: var(--icon-second);
+    /* border-radius: 5px; */
+    border: 1.5px solid var(--icon-primare);
+    width: 20px;
+    position: absolute;
+}
+
+.side-icon-item:nth-child(1){
+    top: 0;
+
+}
+.side-icon-item:nth-child(2){
+    top: 6px;
+}
+.side-icon-item:nth-child(3){
+    top: 12px;
+}
+
+
+/* main */
+#main{
+    border-radius: 1px solid black;
+    display: flexbox;
+}
