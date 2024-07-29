@@ -2,7 +2,11 @@
     --icon-primare:black;
     --icon-second:rgba(0, 0, 0, 0.475);
     --borde:rgba(0, 0, 0, 0.162);
+    --background-dark-ligth: #00000012;
+}
 
+#teste:hover {
+        text-decoration: none !important;
 }
 
 *{
@@ -12,12 +16,14 @@
 
 /* cabeçalho */
 #header{
-    border-radius: 1px solid var(--borde);/* teste **/
-    padding: 20px;
+    border-radius: 1px solid var(--borde);
+    padding: 10px 5px 0px 3%;
     position: fixed;
-    height: 10px;
-    width: 100vw;
+    height: 45px;
+    width: 100%;
     display: flex;
+    top: 0;
+    background-color: white;
 }
 
 #header .start{
@@ -30,31 +36,93 @@
     display: flex;
     align-items: center;
     flex: 7;
+    justify-content: center;
+    /* margin-right: 5%; */
 }
 
 #header .end{
-    flex: 3;
+    flex: 2;
+    display: flex;
+    position: relative;
+    right: 5%;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.end > div {
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    /* border: 1px solid; */
+    box-sizing: border-box;
+    padding: 3px;
+    border-radius: 30px;
+}
+
+
+#header .end > *:nth-child(3) > img{
+    padding: 0;
+    margin: 0;
+    border-radius: 30px;
+
+}
+
+#header .end > *:nth-child(3) > img:hover{
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+}
+
+
 
 .search-text{
     border: 0.4px solid var(--borde);
     border-radius: 15px 0 0 15px;
     padding: 5px;
     display: flex;
-    width: 46%;
     justify-content: space-between;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.center .search-text-submit{
+    border-color: var(--borde);
+    background-color: white;
+    border-radius: 0 40px 40px 0;
+    width: 8%;
+    height: 80%;
+    padding: 3px 5px 0 0;
+    margin-left: 1%;
+    color: var(--icon-second);
+    min-width: 35px;
+    max-width: 60px;
 }
 
 #header .search-text input[type=text]{
     outline: 0;
     border: 0;
     background-color: none;
+    width: 25vw;
+    max-width: 500px;
 }
+
+#icon-keyboard{
+    opacity: 0.4;
+}
+
+#content-icon-keyboard:hover #icon-keyboard{
+    opacity: 0.9;
+}
+
 
 #header .search-text .x{
     border: 1px solid var(--icon-second);
     width: 20px; 
     position: absolute;
+}
+
+#header .content-input-clear:hover .x{
+    border-color: red;
+    background-color: red;
 }
 
 #header .search-text #a.x{
@@ -65,10 +133,24 @@
     rotate: 135deg;
 }
 
+.content-search-voice{
+    margin-left: 10px;
+    height: 80%;
+    width: 8%;
+}
+
+.search-voice{
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;
+    box-sizing: border-box;
+    padding: 4px 2px 2px 5px; 
+}
+
 #header .logo{
     width: 90px;
     height: 20px;
-    padding: 20px;
+    margin: 0 13%;
 }
 
 #icon-keyboard{
@@ -87,18 +169,20 @@
     height: 100vh;
 }
 .side-icon{
-    width: 30px;
-    height: 12px;
+    width: 20px;
+    height: 20px;
     position: relative;
-
+    padding: 6px 4px 3px 4px;
+    border-radius: 40px;
+    flex-shrink: 0;
 }
 
+
 .side-icon-item{
-    background-color: var(--icon-second);
-    /* border-radius: 5px; */
-    border: 1.5px solid var(--icon-primare);
-    width: 20px;
-    position: absolute;
+    background-color: rgb(0 0 0);
+    width: 100%;
+    position: relative;
+    height: 1.5px;
 }
 
 .side-icon-item:nth-child(1){
@@ -106,10 +190,10 @@
 
 }
 .side-icon-item:nth-child(2){
-    top: 6px;
+    top: 20%;
 }
 .side-icon-item:nth-child(3){
-    top: 12px;
+    top: 40%;
 }
 
 
@@ -117,4 +201,43 @@
 #main{
     border-radius: 1px solid black;
     display: flexbox;
+}
+
+.hover-icon-second:hover {
+    background-color: var(--background-dark-ligth);
+    position: relative;
+    
+    /* box-sizing: border-box; */
+}
+
+
+@media only screen and (max-width: 750px){
+    #header .end{
+        flex: 2;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    #header .end{
+        flex: 2;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .search-text{
+        display: none;
+    }
+
+    .center .search-text-submit{
+        border-radius: 40px;
+    }
+
+    #header .center{
+        justify-content: start;
+    }
+
+    /* .side-icon {
+        width: 20px;
+        height: 10px;
+    } */
 }
